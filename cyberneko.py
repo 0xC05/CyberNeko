@@ -38,7 +38,7 @@ async def crisishelp(ctx, country: str):
     chdata = urllib.request.urlopen(churl)
     chjsondata = json.load(chdata)
 
-    await ctx.send(chjsondata[0]['Name'])
+    await ctx.send('```' + chjsondata[0]['crisishelp'] + '```')
 
 @bot.command()
 async def fuckyou(ctx):
